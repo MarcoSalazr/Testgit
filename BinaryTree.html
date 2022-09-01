@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(191, 212, 210);
+        }
+        
+        .entradas {
+            border-color: black;
+            border-style: solid;
+            border-radius: 6px;
+            width: 25%;
+            padding: 6px 6px;
+            box-sizing: border-box;
+            margin-bottom: 8px;
+        }
+        
+        .ah1 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            padding: 3px;
+            margin: -.7% 0;
+            margin-bottom: -0.9%;
+        }
+        
+        .boton {
+            background-color: #4CAF50;
+            border: solid black;
+            border-radius: 4px;
+            padding: 8px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 2px 2px;
+            margin-top: -0.9%;
+            margin-bottom: 10px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+        .espacios {
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        
+        .mostrados {
+            border-radius: 10px;
+            border-style: solid;
+            border-color: lightskyblue;
+            background-color: mediumaquamarine;
+            padding: 5px;
+        }
+        
+        .rojo {
+            background-color: lightcoral;
+            border-color: red;
+        }
+        
+        .azul {
+            background-color: lightskyblue;
+            border-color: darkblue;
+        }
+        
+        .verde {
+            background-color: mediumaquamarine;
+            border-color: darkgreen;
+        }
+    </style>
+    <header>
+        <div id="app">
+            <br>
+            <section>
+                <form>
+                    <label for='txtCod'>
+                        <p class="ah1">Codigo:</p><br><input class="entradas" type='text' id='txtCod'>
+                        </label><br>
+                    <label for='txtNom'>
+                        <p class="ah1">Nombre:</p><br><input class="entradas" type='text' id='txtNom'>
+                        </label> <br>
+                    <label for='txtPre'>
+                        <p class="ah1">Precio:</p><br><input class="entradas" type='number' id='txtPre'>
+                        </label> <br>
+                    <label for='txtCan'>
+                        <p class="ah1">Cantidad:</p><br><input class="entradas" type='number' id='txtCan'>
+                        </label> <br><br>
+                    <button class="boton verde" type='button' id='btnAdd'>Agregar</button>
+                    <button class="boton azul" type='button' id='btnInOrder'>InOrder</button>
+                    <button class="boton azul" type='button' id='btnPostOrder'>PostOrder</button>
+                    <button class="boton azul" type='button' id='btnPreOrder'>PreOrder</button>
+                    <button class="boton rojo" type='reset'>Cancelar</button><br>
+                </form>
+                <form>
+                    <label for='txtSearch'>
+                        <p class="ah1">Buscar:</p><br><input class="entradas" type='number' id='txtSearch'>
+                        </label> <br><br>
+                    <button class="boton verde" type="button" id="btnSearch">Buscar</button>
+                    <button class="boton rojo" type='reset'>Cancelar</button><br>
+
+                </form>
+            </section>
+            <div id="detalles" class="espacios">
+            </div>
+        </div>
+    </header>
+    <script src="binarytreefunctions.js">
+    </script>
+    <div id="arbol">
+
+    </div>
+</body>
+
+</html>
